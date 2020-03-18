@@ -2,12 +2,13 @@
 # OM 2020.03.10 le but est d'insérer des valeurs en MySql dans une seule table
 
 import connect_db
+import pymysql
 
 
 class DbInsertOneTable():
 
     # Constructeur, à chaque instanciation de cette classe "DbInsertOneTable()" les lignes de code de la méthode "__init__ (self)" sont interprétées.
-    def __init__ (self):  # Constructeur
+    def __init__(self):  # Constructeur
         # OM 2020.01.28 CONNECTION A LA BD
         self.connection_dbc = connect_db.DatabaseTools().connect_ma_bd()
         # Ouvre un curseur, c'est indispensable pour se déplacer dans les champs de la BD.
